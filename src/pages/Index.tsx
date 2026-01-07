@@ -137,7 +137,7 @@ const Index = () => {
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto mb-10">
             Join thousands of coffee enthusiasts who have discovered the art of 
-            exceptional coffee with Aurelia.
+            exceptional coffee with MAAN.
           </p>
           <Button variant="luxury" size="xl" asChild>
             <Link to="/products">

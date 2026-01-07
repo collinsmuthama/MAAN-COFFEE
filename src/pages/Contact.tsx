@@ -41,25 +41,25 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "hello@aureliacoffee.com",
-      link: "mailto:hello@aureliacoffee.com",
+      value: "info@maancoffe.com",
+      link: "mailto:info@maancoffe.com",
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+1 (555) 123-4567",
-      link: "tel:+15551234567",
+      value: "+254  721 811 811",
+      link: "tel:+254721811811",
     },
     {
       icon: MapPin,
       title: "Headquarters",
-      value: "123 Coffee Lane, London, UK",
+      value: "Mlolongo off Mombasa Road, Nairobi, Kenya",
       link: "#",
     },
     {
       icon: Clock,
       title: "Hours",
-      value: "Mon-Fri: 9AM - 6PM GMT",
+      value: "Mon-Fri: 9AM - 6PM EAT",
       link: "#",
     },
   ];

@@ -32,7 +32,7 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="inline-block mb-6">
-              <span className="font-display text-2xl font-bold gold-text">AURELIA</span>
+              <span className="font-display text-2xl font-bold gold-text">MAAN</span>
               <span className="font-display text-sm text-muted-foreground tracking-widest ml-2">COFFEE</span>
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-6">
@@ -110,7 +110,7 @@ const Footer = () => {
         <div className="mt-12 pt-8 border-t border-gold/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-muted-foreground text-sm">
-              © 2024 Aurelia Coffee. All rights reserved.
+              © 2026 MAAN Coffee. All rights reserved.
             </p>
             <p className="text-muted-foreground text-sm">
               Crafted with ☕ and passion

@@ -27,7 +27,7 @@ const About = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-espresso/50 to-background" />
         <div className="relative z-10 container mx-auto px-4 text-center">
           <h1 className="font-display text-5xl md:text-7xl font-bold mb-6">
-            About <span className="gold-text">Aurelia</span>
+            About <span className="gold-text">MAAN</span>
           </h1>
           <div className="section-divider mb-8" />
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
@@ -47,7 +47,7 @@ const About = () => {
               </h2>
               <div className="w-16 h-0.5 bg-gold mb-8" />
               <p className="text-muted-foreground leading-relaxed mb-6">
-                Aurelia Coffee is a luxury coffee brand dedicated to sourcing, roasting, 
+                MAAN Coffee is a luxury coffee brand dedicated to sourcing, roasting, 
                 and delivering the world's most exceptional coffee beans. We partner with 
                 elite farmers across six continents to bring you flavors that transcend 
                 the ordinary.

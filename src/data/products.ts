@@ -1,4 +1,4 @@
-import espressoImage from "@/assets/espresso-coffee.png";
+import espressoImage from "@/assets/expresso.png";
 import darkRoastImage from "@/assets/dark-roast-coffee.png";
 import mediumRoastImage from "@/assets/medium-roast-coffee.png";
 import { Product } from "@/contexts/CartContext";
@@ -7,7 +7,7 @@ export const products: Product[] = [
   {
     id: "espresso-1kg",
     name: "Espresso Blend",
-    description: "Bold, rich, and intensely aromatic with notes of dark chocolate and caramel. Perfect for traditional espresso and milk-based drinks.",
+    description: "Rich, Full-Bodied, Sweet Chocolate and intensely aromatic with notes of dark chocolate and caramel. Perfect for traditional espresso and milk-based drinks.",
     price: 34.99,
     image: espressoImage,
     weight: "1kg",
@@ -15,8 +15,8 @@ export const products: Product[] = [
   },
   {
     id: "dark-roast-1kg",
-    name: "Dark Roast Reserve",
-    description: "Deep, smoky flavors with a velvety finish. Notes of roasted nuts, brown sugar, and a hint of spice.",
+    name: "Dark Roast",
+    description: "Earthy, Dark Chocolate with a velvety finish. Notes of roasted nuts, brown sugar, and a hint of spice.",
     price: 32.99,
     image: darkRoastImage,
     weight: "1kg",
@@ -24,8 +24,8 @@ export const products: Product[] = [
   },
   {
     id: "medium-roast-1kg",
-    name: "Medium Roast Classic",
-    description: "Perfectly balanced with bright acidity and sweet undertones. Featuring notes of citrus, honey, and toasted almonds.",
+    name: "Medium Roast",
+    description: "Citrus Orange Perfectly balanced with bright acidity and sweet undertones. Featuring notes of citrus, honey, and toasted almonds.",
     price: 29.99,
     image: mediumRoastImage,
     weight: "1kg",
