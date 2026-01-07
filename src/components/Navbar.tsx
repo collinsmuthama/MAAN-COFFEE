@@ -3,6 +3,7 @@ import { ShoppingCart, Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useCart } from "@/contexts/CartContext";
+import Logo  from "@/assets/LOGO.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,6 +25,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
+            <img src={Logo} alt="MAAN Coffee Logo" />
             <span className="font-display text-2xl font-bold gold-text">MAAN</span>
             <span className="font-display text-sm text-muted-foreground tracking-widest">COFFEE</span>
           </Link>
