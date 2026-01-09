@@ -1,12 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Coffee, Star, Award } from "lucide-react";
+import { ArrowRight, Coffee, Star, Award, Truck, Clock } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import OfferCard from "@/components/OfferCard";
 import HeroCarousel from "@/components/HeroCarousel";
-import { products, offers } from "@/data/products";
+import { products, offers, readyMadeDrinks } from "@/data/products";
+import readyMadePoster from "@/assets/ready-made-poster.jpg";
+import { useCart } from "@/contexts/CartContext";
 
 const Index = () => {
+  const { addToCart } = useCart();
+
   return (
     <div className="min-h-screen">
       {/* Hero Carousel */}
@@ -34,12 +38,71 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Products Section */}
-      <section className="py-24">
+      {/* Ready-Made Coffee Poster */}
+      <section className="py-16 bg-coffee-rich">
+        <div className="container mx-auto px-4">
+          <div className="relative overflow-hidden rounded-2xl border-2 border-gold/40 shadow-2xl">
+            <img 
+              src={readyMadePoster} 
+              alt="Order Ready-Made Coffee - Delivered Fresh" 
+              className="w-full h-[300px] md:h-[400px] object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-espresso/80 via-transparent to-espresso/80" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-8">
+              <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
+                <span className="gold-text">Fresh Coffee</span> Delivered to Your Door
+              </h2>
+              <p className="text-cream/90 text-lg md:text-xl max-w-2xl mb-6">
+                Order your favorite ready-made coffee drinks and enjoy café-quality beverages at home
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
+                <div className="flex items-center gap-2 bg-espresso/60 px-4 py-2 rounded-full border border-gold/30">
+                  <Truck className="h-5 w-5 text-gold" />
+                  <span className="text-cream text-sm">30-Min Delivery</span>
+                </div>
+                <div className="flex items-center gap-2 bg-espresso/60 px-4 py-2 rounded-full border border-gold/30">
+                  <Clock className="h-5 w-5 text-gold" />
+                  <span className="text-cream text-sm">Freshly Made</span>
+                </div>
+              </div>
+              <Button variant="luxury" size="xl" asChild>
+                <a href="#ready-made-drinks">
+                  Order Now
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ready-Made Drinks Section */}
+      <section id="ready-made-drinks" className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
-              <span className="gold-text">Premium</span> Collection
+              <span className="gold-text">Ready-Made</span> Coffee Delivery
+            </h2>
+            <div className="section-divider mb-6" />
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Freshly prepared coffee drinks delivered straight to your door. Café quality, home comfort.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {readyMadeDrinks.map((drink) => (
+              <ProductCard key={drink.id} product={drink} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Products Section */}
+      <section className="py-24 bg-coffee-rich">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
+              <span className="gold-text">Premium</span> Coffee Beans
             </h2>
             <div className="section-divider mb-6" />
             <p className="text-muted-foreground max-w-2xl mx-auto">

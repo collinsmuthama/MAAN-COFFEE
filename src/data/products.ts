@@ -11,7 +11,7 @@ export const products: Product[] = [
     price: 34.99,
     image: espressoImage,
     weight: "1kg",
-    category: "espresso",
+    category: "beans",
   },
   {
     id: "dark-roast-1kg",
@@ -20,7 +20,7 @@ export const products: Product[] = [
     price: 32.99,
     image: darkRoastImage,
     weight: "1kg",
-    category: "dark-roast",
+    category: "beans",
   },
   {
     id: "medium-roast-1kg",
@@ -29,7 +29,65 @@ export const products: Product[] = [
     price: 29.99,
     image: mediumRoastImage,
     weight: "1kg",
-    category: "medium-roast",
+    category: "beans",
+  },
+];
+
+// Ready-made coffee drinks for delivery
+export const readyMadeDrinks: Product[] = [
+  {
+    id: "espresso-shot",
+    name: "Classic Espresso",
+    description: "Double shot of our signature espresso blend. Bold, rich, and perfectly extracted.",
+    price: 4.99,
+    image: espressoImage,
+    weight: "60ml",
+    category: "ready-made",
+  },
+  {
+    id: "cappuccino",
+    name: "Creamy Cappuccino",
+    description: "Silky steamed milk and velvety foam atop our premium espresso. A classic Italian indulgence.",
+    price: 6.99,
+    image: darkRoastImage,
+    weight: "350ml",
+    category: "ready-made",
+  },
+  {
+    id: "caffe-latte",
+    name: "Caffè Latte",
+    description: "Smooth espresso with steamed milk and a light layer of foam. Creamy and comforting.",
+    price: 6.49,
+    image: mediumRoastImage,
+    weight: "400ml",
+    category: "ready-made",
+  },
+  {
+    id: "iced-americano",
+    name: "Iced Americano",
+    description: "Chilled espresso with cold water over ice. Refreshing and bold for warm days.",
+    price: 5.49,
+    image: espressoImage,
+    weight: "450ml",
+    category: "ready-made",
+  },
+  {
+    id: "mocha",
+    name: "Chocolate Mocha",
+    description: "Rich espresso blended with premium chocolate and steamed milk. Topped with whipped cream.",
+    price: 7.49,
+    image: darkRoastImage,
+    weight: "400ml",
+    category: "ready-made",
+  },
+  {
+    id: "cold-brew",
+    name: "Cold Brew Coffee",
+    description: "Slow-steeped for 24 hours for a smooth, naturally sweet flavor with low acidity.",
+    price: 5.99,
+    image: mediumRoastImage,
+    weight: "500ml",
+    category: "ready-made",
   },
 ];
 
