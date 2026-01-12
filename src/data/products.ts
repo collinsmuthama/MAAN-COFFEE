@@ -2,6 +2,9 @@ import espressoImage from "@/assets/expresso.png";
 import darkRoastImage from "@/assets/dark-roast-coffee.png";
 import mediumRoastImage from "@/assets/medium-roast-coffee.png";
 import takeawayCup from "@/assets/takeaway-cup.jpeg";
+import takeawayMaanEspresso from "@/assets/takeaway-maan-espresso.png";
+import takeawayMaanDarkRoast from "@/assets/takeaway-maan-dark-roast.png";
+import takeawayMaanMediumRoast from "@/assets/takeaway-maan-medium-roast.png";
 import { Product } from "@/contexts/CartContext";
 
 export const products: Product[] = [
@@ -37,57 +40,30 @@ export const products: Product[] = [
 // Ready-to-drink coffee in takeaway cups
 export const readyMadeDrinks: Product[] = [
   {
-    id: "espresso-shot",
-    name: "Classic Espresso",
-    description: "Double shot of our signature espresso blend. Bold, rich, and perfectly extracted.",
-    price: 4.99,
-    image: takeawayCup,
-    weight: "60ml",
-    category: "ready-made",
-  },
-  {
-    id: "cappuccino",
-    name: "Creamy Cappuccino",
-    description: "Silky steamed milk and velvety foam atop our premium espresso. A classic Italian indulgence.",
-    price: 6.99,
-    image: takeawayCup,
+    id: "maan-espresso-takeaway",
+    name: "Maan Espresso",
+    description: "Rich, full-bodied espresso with sweet chocolate notes and intense aroma. Perfect for a quick pick-me-up.",
+    price: 5.99,
+    image: takeawayMaanEspresso,
     weight: "350ml",
     category: "ready-made",
   },
   {
-    id: "caffe-latte",
-    name: "Caffè Latte",
-    description: "Smooth espresso with steamed milk and a light layer of foam. Creamy and comforting.",
-    price: 6.49,
-    image: takeawayCup,
-    weight: "400ml",
-    category: "ready-made",
-  },
-  {
-    id: "iced-americano",
-    name: "Iced Americano",
-    description: "Chilled espresso with cold water over ice. Refreshing and bold for warm days.",
-    price: 5.49,
-    image: takeawayCup,
-    weight: "450ml",
-    category: "ready-made",
-  },
-  {
-    id: "mocha",
-    name: "Chocolate Mocha",
-    description: "Rich espresso blended with premium chocolate and steamed milk. Topped with whipped cream.",
-    price: 7.49,
-    image: takeawayCup,
-    weight: "400ml",
-    category: "ready-made",
-  },
-  {
-    id: "cold-brew",
-    name: "Cold Brew Coffee",
-    description: "Slow-steeped for 24 hours for a smooth, naturally sweet flavor with low acidity.",
+    id: "maan-dark-roast-takeaway",
+    name: "Maan Dark Roast",
+    description: "Earthy, dark chocolate flavors with a velvety finish. Notes of roasted nuts and brown sugar.",
     price: 5.99,
-    image: takeawayCup,
-    weight: "500ml",
+    image: takeawayMaanDarkRoast,
+    weight: "350ml",
+    category: "ready-made",
+  },
+  {
+    id: "maan-medium-roast-takeaway",
+    name: "Maan Medium Roast",
+    description: "Perfectly balanced with bright acidity and sweet undertones. Featuring notes of citrus and honey.",
+    price: 5.99,
+    image: takeawayMaanMediumRoast,
+    weight: "350ml",
     category: "ready-made",
   },
 ];
