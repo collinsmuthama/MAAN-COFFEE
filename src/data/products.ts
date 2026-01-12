@@ -1,10 +1,7 @@
 import espressoImage from "@/assets/expresso.png";
 import darkRoastImage from "@/assets/dark-roast-coffee.png";
 import mediumRoastImage from "@/assets/medium-roast-coffee.png";
-import takeawayEspresso from "@/assets/takeaway-espresso.png";
-import takeawayCappuccino from "@/assets/takeaway-cappuccino.png";
-import takeawayIced from "@/assets/takeaway-iced.png";
-import takeawayMocha from "@/assets/takeaway-mocha.png";
+import takeawayCup from "@/assets/takeaway-cup.jpeg";
 import { Product } from "@/contexts/CartContext";
 
 export const products: Product[] = [
@@ -44,7 +41,7 @@ export const readyMadeDrinks: Product[] = [
     name: "Classic Espresso",
     description: "Double shot of our signature espresso blend. Bold, rich, and perfectly extracted.",
     price: 4.99,
-    image: takeawayEspresso,
+    image: takeawayCup,
     weight: "60ml",
     category: "ready-made",
   },
@@ -53,7 +50,7 @@ export const readyMadeDrinks: Product[] = [
     name: "Creamy Cappuccino",
     description: "Silky steamed milk and velvety foam atop our premium espresso. A classic Italian indulgence.",
     price: 6.99,
-    image: takeawayCappuccino,
+    image: takeawayCup,
     weight: "350ml",
     category: "ready-made",
   },
@@ -62,7 +59,7 @@ export const readyMadeDrinks: Product[] = [
     name: "Caffè Latte",
     description: "Smooth espresso with steamed milk and a light layer of foam. Creamy and comforting.",
     price: 6.49,
-    image: takeawayCappuccino,
+    image: takeawayCup,
     weight: "400ml",
     category: "ready-made",
   },
@@ -71,7 +68,7 @@ export const readyMadeDrinks: Product[] = [
     name: "Iced Americano",
     description: "Chilled espresso with cold water over ice. Refreshing and bold for warm days.",
     price: 5.49,
-    image: takeawayIced,
+    image: takeawayCup,
     weight: "450ml",
     category: "ready-made",
   },
@@ -80,7 +77,7 @@ export const readyMadeDrinks: Product[] = [
     name: "Chocolate Mocha",
     description: "Rich espresso blended with premium chocolate and steamed milk. Topped with whipped cream.",
     price: 7.49,
-    image: takeawayMocha,
+    image: takeawayCup,
     weight: "400ml",
     category: "ready-made",
   },
@@ -89,7 +86,7 @@ export const readyMadeDrinks: Product[] = [
     name: "Cold Brew Coffee",
     description: "Slow-steeped for 24 hours for a smooth, naturally sweet flavor with low acidity.",
     price: 5.99,
-    image: takeawayIced,
+    image: takeawayCup,
     weight: "500ml",
     category: "ready-made",
   },
