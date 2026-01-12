@@ -14,16 +14,69 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      orders: {
+        Row: {
+          created_at: string
+          customer_email: string | null
+          customer_name: string
+          customer_phone: string
+          delivery_address: string
+          estimated_delivery_time: string | null
+          id: string
+          items: Json
+          notes: string | null
+          status: Database["public"]["Enums"]["order_status"]
+          total_amount: number
+          tracking_code: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          customer_email?: string | null
+          customer_name: string
+          customer_phone: string
+          delivery_address: string
+          estimated_delivery_time?: string | null
+          id?: string
+          items: Json
+          notes?: string | null
+          status?: Database["public"]["Enums"]["order_status"]
+          total_amount: number
+          tracking_code: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          customer_email?: string | null
+          customer_name?: string
+          customer_phone?: string
+          delivery_address?: string
+          estimated_delivery_time?: string | null
+          id?: string
+          items?: Json
+          notes?: string | null
+          status?: Database["public"]["Enums"]["order_status"]
+          total_amount?: number
+          tracking_code?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      generate_tracking_code: { Args: never; Returns: string }
     }
     Enums: {
-      [_ in never]: never
+      order_status:
+        | "pending"
+        | "confirmed"
+        | "preparing"
+        | "ready"
+        | "out_for_delivery"
+        | "delivered"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +203,15 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      order_status: [
+        "pending",
+        "confirmed",
+        "preparing",
+        "ready",
+        "out_for_delivery",
+        "delivered",
+      ],
+    },
   },
 } as const
