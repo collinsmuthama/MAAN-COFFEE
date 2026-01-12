@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Product } from "@/contexts/CartContext";
 import { useCart } from "@/contexts/CartContext";
 import { ShoppingCart } from "lucide-react";
-import maanLogo from "@/assets/LOGO.png";
 
 interface ProductCardProps {
   product: Product;
@@ -10,7 +9,6 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
   const { addToCart } = useCart();
-  const isReadyMade = product.category === "ready-made";
 
   return (
     <div className="luxury-card group p-6 flex flex-col h-full">
@@ -22,14 +20,6 @@ const ProductCard = ({ product }: ProductCardProps) => {
           alt={product.name}
           className="w-full h-64 object-contain transform group-hover:scale-105 transition-transform duration-700"
         />
-        {/* Maan Coffee Logo overlay for takeaway cups */}
-        {isReadyMade && (
-          <img
-            src={maanLogo}
-            alt="Maan Coffee"
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 object-contain pointer-events-none"
-          />
-        )}
         <div className="absolute top-3 right-3 bg-gold text-coffee-dark text-xs font-bold px-2 py-1 rounded">
           {product.weight}
         </div>
