@@ -7,7 +7,7 @@ import { Product } from "@/contexts/CartContext";
 export const products: Product[] = [
   {
     id: "espresso-1kg",
-    name: "Espresso Blend",
+    name: "Maan Espresso",
     description: "Rich, Full-Bodied, Sweet Chocolate and intensely aromatic with notes of dark chocolate and caramel. Perfect for traditional espresso and milk-based drinks.",
     price: 24.5,
     image: espressoImage,
@@ -16,7 +16,7 @@ export const products: Product[] = [
   },
   {
     id: "dark-roast-1kg",
-    name: "Dark Roast",
+    name: "Maan Dark Roast",
     description: "Earthy, Dark Chocolate with a velvety finish. Notes of roasted nuts, brown sugar, and a hint of spice.",
     price: 25.5,
     image: darkRoastImage,
@@ -25,7 +25,7 @@ export const products: Product[] = [
   },
   {
     id: "medium-roast-1kg",
-    name: "Medium Roast",
+    name: "Maan Medium Roast",
     description: "Citrus Orange Perfectly balanced with bright acidity and sweet undertones. Featuring notes of citrus, honey, and toasted almonds.",
     price: 25.5,
     image: mediumRoastImage,
