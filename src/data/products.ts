@@ -45,7 +45,7 @@ export const readyMadeDrinks: Product[] = [
     description: "Rich, full-bodied espresso with sweet chocolate notes and intense aroma. Perfect for a quick pick-me-up.",
     price: 5.99,
     image: takeawayMaanEspresso,
-    weight: "350ml",
+    weight: "450ml",
     category: "ready-made",
   },
   {
@@ -54,7 +54,7 @@ export const readyMadeDrinks: Product[] = [
     description: "Earthy, dark chocolate flavors with a velvety finish. Notes of roasted nuts and brown sugar.",
     price: 5.99,
     image: takeawayMaanDarkRoast,
-    weight: "350ml",
+    weight: "450ml",
     category: "ready-made",
   },
   {
@@ -63,7 +63,7 @@ export const readyMadeDrinks: Product[] = [
     description: "Perfectly balanced with bright acidity and sweet undertones. Featuring notes of citrus and honey.",
     price: 5.99,
     image: takeawayMaanMediumRoast,
-    weight: "350ml",
+    weight: "450ml",
     category: "ready-made",
   },
 ];
