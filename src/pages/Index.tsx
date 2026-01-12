@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { ArrowRight, Coffee, Star, Award, Truck, Clock } from "lucide-react";
+import { ArrowRight, Coffee, Star, Award, Truck, Clock, Package } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import OfferCard from "@/components/OfferCard";
 import HeroCarousel from "@/components/HeroCarousel";
@@ -58,19 +58,26 @@ const Index = () => {
               <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
                 <div className="flex items-center gap-2 bg-espresso/60 px-4 py-2 rounded-full border border-gold/30">
                   <Truck className="h-5 w-5 text-gold" />
-                  <span className="text-cream text-sm">30-Min Delivery</span>
+                  <span className="text-cream text-sm">25-35 Min Delivery</span>
                 </div>
                 <div className="flex items-center gap-2 bg-espresso/60 px-4 py-2 rounded-full border border-gold/30">
                   <Clock className="h-5 w-5 text-gold" />
                   <span className="text-cream text-sm">Freshly Made</span>
                 </div>
               </div>
-              <Button variant="luxury" size="xl" asChild>
-                <a href="#ready-made-drinks">
-                  Order Now
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                <Button variant="luxury" size="xl" asChild>
+                  <a href="#ready-made-drinks">
+                    Order Now
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild className="border-gold/50 text-cream hover:bg-gold/10">
+                  <Link to="/track-order">
+                    Track Your Order
+                  </Link>
+                </Button>
+              </div>
             </div>
           </div>
         </div>
