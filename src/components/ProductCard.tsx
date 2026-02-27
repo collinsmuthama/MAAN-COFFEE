@@ -38,7 +38,7 @@ const ProductCard = ({ product }: ProductCardProps) => {
       {/* Price & CTA */}
       <div className="mt-auto pt-4 border-t border-gold/20">
         <div className="flex items-center justify-between">
-          <span className="font-display text-2xl gold-text">${product.price}</span>
+          <span className="font-display text-2xl gold-text">${product.price} || KES {product.local}</span>
           <Button
             variant="gold"
             size="lg"
