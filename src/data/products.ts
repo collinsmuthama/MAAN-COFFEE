@@ -2,7 +2,7 @@ import espressoImage from "@/assets/expresso.png";
 import darkRoastImage from "@/assets/dark-roast-coffee.png";
 import mediumRoastImage from "@/assets/medium-roast-coffee.png";
 import takeawayCup from "@/assets/takeaway-cup.jpeg";
-import takeawayMaanEspresso from "@/assets/takeaway-maan-espresso.png";
+import takeawayMaanEspresso from "@/assets/expresso.jpeg";
 import takeawayMaanDarkRoast from "@/assets/takeaway-maan-dark-roast.png";
 import takeawayMaanMediumRoast from "@/assets/takeaway-maan-medium-roast.png";
 import { Product } from "@/contexts/CartContext";
@@ -41,27 +41,54 @@ export const products: Product[] = [
 export const readyMadeDrinks: Product[] = [
   {
     id: "maan-espresso-takeaway",
-    name: "Maan Espresso",
+    name: "Maan Espresso(Medium)",
     description: "Rich, full-bodied espresso with sweet chocolate notes and intense aroma. Perfect for a quick pick-me-up.",
-    price: 5.99,
+    price: 3.8,
     image: takeawayMaanEspresso,
     weight: "450ml",
     category: "ready-made",
   },
   {
     id: "maan-dark-roast-takeaway",
-    name: "Maan Dark Roast",
+    name: "Maan Dark Roast(Medium)",
     description: "Earthy, dark chocolate flavors with a velvety finish. Notes of roasted nuts and brown sugar.",
-    price: 5.99,
+    price: 3.8,
     image: takeawayMaanDarkRoast,
     weight: "450ml",
     category: "ready-made",
   },
   {
     id: "maan-medium-roast-takeaway",
-    name: "Maan Medium Roast",
+    name: "Maan Medium Roast(Medium)",
     description: "Perfectly balanced with bright acidity and sweet undertones. Featuring notes of citrus and honey.",
-    price: 5.99,
+    price: 3.8,
+    image: takeawayMaanMediumRoast,
+    weight: "450ml",
+    category: "ready-made",
+  },
+    {
+    id: "maan-espresso-takeaway",
+    name: "Maan Espresso(Single)",
+    description: "Rich, full-bodied espresso with sweet chocolate notes and intense aroma. Perfect for a quick pick-me-up.",
+    price: 2.7,
+    image: takeawayMaanEspresso,
+    weight: "450ml",
+    category: "ready-made",
+  },
+  {
+    id: "maan-dark-roast-takeaway",
+    name: "Maan Dark Roast(Single)",
+    description: "Earthy, dark chocolate flavors with a velvety finish. Notes of roasted nuts and brown sugar.",
+    price: 2.7,
+    image: takeawayMaanDarkRoast,
+    weight: "450ml",
+    category: "ready-made",
+  },
+  {
+    id: "maan-medium-roast-takeaway",
+    name: "Maan Medium Roast(Single)",
+    description: "Perfectly balanced with bright acidity and sweet undertones. Featuring notes of citrus and honey.",
+    price: 2.7,
     image: takeawayMaanMediumRoast,
     weight: "450ml",
     category: "ready-made",

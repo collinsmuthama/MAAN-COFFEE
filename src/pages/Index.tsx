@@ -94,6 +94,20 @@ const Index = () => {
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Freshly prepared coffee drinks delivered straight to your door. Café quality, home comfort.
             </p>
+           <p className="text-muted-foreground max-w-2xl mx-auto flex flex-wrap justify-center gap-4">
+            <span className="inline-flex items-center gap-1">
+              <img src="https://twemoji.maxcdn.com/v/latest/72x72/1f1f0-1f1ea.png" alt="🇰🇪" className="w-5 h-5" /> Kenya
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <img src="https://twemoji.maxcdn.com/v/latest/72x72/1f1f8-1f1f4.png" alt="🇸🇴" className="w-5 h-5" /> Somalia
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <img src="https://twemoji.maxcdn.com/v/latest/72x72/1f1fa-1f1ec.png" alt="🇺🇬" className="w-5 h-5" /> Uganda
+            </span>
+            <span className="inline-flex items-center gap-1">
+              <img src="https://twemoji.maxcdn.com/v/latest/72x72/1f1f9-1f1ff.png" alt="🇹🇿" className="w-5 h-5" /> Tanzania
+            </span>
+          </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

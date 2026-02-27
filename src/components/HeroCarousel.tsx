@@ -24,6 +24,7 @@ const slides = [
       "Indulge in our meticulously crafted blends, sourced from the world's finest coffee-growing regions.",
     primaryCta: { text: "Explore Collection", link: "/products" },
     secondaryCta: { text: "Our Story", link: "/about" },
+    tertiaryCta: { text: "Export Market", link: "/markets" },
   },
   {
     image: heroSlide2,
@@ -34,6 +35,7 @@ const slides = [
       "Every batch is carefully roasted to bring out the unique character and rich flavors of our premium beans.",
     primaryCta: { text: "Shop Now", link: "/products" },
     secondaryCta: { text: "Learn More", link: "/about" },
+    tertiaryCta: { text: "Export Market", link: "/markets" },
   },
   {
     image: heroSlide3,
@@ -44,6 +46,7 @@ const slides = [
       "Join our coffee club and receive freshly roasted beans delivered to your doorstep every month.",
     primaryCta: { text: "Subscribe Now", link: "/products" },
     secondaryCta: { text: "View Offers", link: "/products" },
+    tertiaryCta: { text: "Export Market", link: "/markets" },
   },
 ];
 
@@ -117,6 +120,11 @@ const HeroCarousel = () => {
                     <Button variant="goldOutline" size="xl" asChild>
                       <Link to={slide.secondaryCta.link}>
                         {slide.secondaryCta.text}
+                      </Link>
+                    </Button>
+                    <Button variant="goldOutline" size="xl" asChild>  
+                      <Link to={slide.tertiaryCta.link}>
+                        {slide.tertiaryCta.text}
                       </Link>
                     </Button>
                   </div>
