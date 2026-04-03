@@ -1,9 +1,9 @@
-import espressoImage from "@/assets/expresso.png";
-import darkRoastImage from "@/assets/dark_roast.png";
-import mediumRoastImage from "@/assets/medium_roast.png";
+import espressoImage from "@/assets/Espresso.png";
+import darkRoastImage from "@/assets/Dark_roast.jpeg";
+import mediumRoastImage from "@/assets/Medium.png";
 import takeawayCup from "@/assets/takeaway-cup.jpeg";
 import takeawayMaanEspresso from "@/assets/espresso_takeaway.png";
-import takeawayMaanDarkRoast from "@/assets/dark_takeaway.png";
+import takeawayMaanDarkRoast from "@/assets/dark_takeaway.jpeg";
 import takeawayMaanMediumRoast from "@/assets/takeaway-maan-medium-roast.png";
 import { Product } from "@/contexts/CartContext";
 
