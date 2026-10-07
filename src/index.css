@@ -73,6 +73,7 @@
 
   /* Cream content bands paired with the reference's espresso header and footer. */
   section.bg-coffee-rich {
+    color: hsl(var(--foreground));
     --background: 34 62% 86%;
     --foreground: 20 58% 16%;
     --card: 36 65% 92%;
