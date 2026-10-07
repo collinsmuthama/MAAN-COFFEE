@@ -1,0 +1,1 @@
+Keep theme colours in global semantic CSS tokens; scope cream content-band tokens locally so the existing layout stays unchanged and text retains contrast.
