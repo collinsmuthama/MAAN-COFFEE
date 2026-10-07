@@ -14,36 +14,28 @@ import heroSlide1 from "@/assets/hero-slide-1.jpg";
 import heroSlide2 from "@/assets/hero-slide-2.jpg";
 import heroSlide3 from "@/assets/hero-slide-3.jpg";
 
+import poster1 from "@/assets/p1.jpeg";
+import poster2 from "@/assets/p2.jpeg";
+import poster3 from "@/assets/p3.jpeg";
+
 const slides = [
   {
-    image: heroSlide1,
+    image: poster1,
     badge: "Premium Artisan Coffee",
-    title: "Experience",
-    highlight: "Luxury Coffee",
-    description:
-      "Indulge in our meticulously crafted blends, sourced from the world's finest coffee-growing regions.",
     primaryCta: { text: "Explore Collection", link: "/products" },
     secondaryCta: { text: "Our Story", link: "/about" },
     tertiaryCta: { text: "Export Market", link: "/markets" },
   },
   {
-    image: heroSlide2,
+    image: poster2,
     badge: "Artisan Roasting",
-    title: "Crafted with",
-    highlight: "Passion",
-    description:
-      "Every batch is carefully roasted to bring out the unique character and rich flavors of our premium beans.",
     primaryCta: { text: "Shop Now", link: "/products" },
     secondaryCta: { text: "Learn More", link: "/about" },
     tertiaryCta: { text: "Export Market", link: "/markets" },
   },
   {
-    image: heroSlide3,
+    image: poster3,
     badge: "Global Delivery",
-    title: "Subscribe &",
-    highlight: "Save 20%",
-    description:
-      "Join our coffee club and receive freshly roasted beans delivered to your doorstep every month.",
     primaryCta: { text: "Subscribe Now", link: "/products" },
     secondaryCta: { text: "View Offers", link: "/products" },
     tertiaryCta: { text: "Export Market", link: "/markets" },
@@ -64,12 +56,13 @@ const HeroCarousel = () => {
   }, [api]);
 
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-[68vh] md:min-h-[76vh] overflow-hidden">
       <Carousel
         setApi={setApi}
         opts={{
           loop: true,
-          align: "start",
+          align: "center",
+          speed: 1200,
         }}
         plugins={[
           Autoplay({
@@ -78,20 +71,22 @@ const HeroCarousel = () => {
             stopOnMouseEnter: true,
           }),
         ]}
-        className="w-full h-full"
+        className="hero-carousel w-full h-full"
       >
-        <CarouselContent className="ml-0">
+        <CarouselContent className="ml-0 h-full">
           {slides.map((slide, index) => (
-            <CarouselItem key={index} className="pl-0 relative min-h-screen">
+            <CarouselItem key={index} className="pl-0 relative min-h-[68vh] md:min-h-[76vh] overflow-hidden hero-slide">
               {/* Background Image */}
               <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700"
+                className={`hero-image absolute inset-0 bg-cover bg-center bg-no-repeat ${
+                  current === index ? "scale-110 opacity-100" : "scale-100 opacity-90"
+                }`}
                 style={{ backgroundImage: `url(${slide.image})` }}
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
+              <div className="absolute inset-0 bg-gradient-to-b from-background/55 via-background/20 to-background" />
 
               {/* Content */}
-              <div className="relative z-10 container mx-auto px-4 pt-32 pb-20 min-h-screen flex items-center">
+              <div className="hero-content relative z-10 container mx-auto px-4 pt-24 pb-20 min-h-[68vh] md:min-h-[76vh] flex items-center">
                 <div className="max-w-4xl mx-auto text-center">
                   <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gold/30 bg-gold/10 mb-8 animate-fade-in">
                     <Star className="h-4 w-4 text-gold" />
@@ -99,16 +94,6 @@ const HeroCarousel = () => {
                       {slide.badge}
                     </span>
                   </div>
-
-                  <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold mb-6 animate-fade-in">
-                    <span className="text-foreground">{slide.title}</span>
-                    <br />
-                    <span className="gold-text">{slide.highlight}</span>
-                  </h1>
-
-                  <p className="text-muted-foreground text-lg md:text-xl max-w-2xl mx-auto mb-10 animate-fade-in">
-                    {slide.description}
-                  </p>
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
                     <Button variant="luxury" size="xl" asChild>
