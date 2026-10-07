@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 @layer base {
   :root {
@@ -44,6 +43,11 @@
     --cream: 36 65% 89%;
     --coffee-dark: 18 60% 9%;
     --coffee-rich: 34 62% 86%;
+    --home-paper: 38 55% 94%;
+    --home-ink: 22 48% 12%;
+    --home-copper: 29 61% 54%;
+    --home-border: 32 34% 81%;
+    --home-overlay: linear-gradient(90deg, hsl(var(--espresso) / 0.72), hsl(var(--espresso) / 0.12) 65%, transparent);
 
     /* Gradients */
     --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 50%, hsl(var(--gold)) 100%);
@@ -262,3 +266,36 @@
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
 .delay-500 { animation-delay: 500ms; }
+
+/* Homepage-specific palette keeps the rest of the shop unchanged. */
+.home-page { letter-spacing: 0; }
+.home-container { width: min(1120px, calc(100% - 80px)); margin-inline: auto; }
+.home-hero { height: min(590px, 72svh); min-height: 440px; }
+.home-hero-shade { background: var(--home-overlay); }
+.home-hero h1 { font-size: 64px; line-height: 1.1; font-weight: 400; }
+.home-eyebrow { font-size: 10px; text-transform: uppercase; font-weight: 600; }
+.home-cream {
+  --background: var(--home-paper); --foreground: var(--home-ink);
+  --card: 37 48% 92%; --card-foreground: var(--home-ink);
+  --muted: 34 34% 85%; --muted-foreground: 25 18% 36%;
+  --primary: 22 53% 24%; --primary-foreground: var(--home-paper);
+  --gold: 23 55% 33%; --gold-light: 27 54% 43%;
+  --border: var(--home-border); --ring: 23 55% 33%;
+  color: hsl(var(--foreground)); background: hsl(var(--background));
+}
+.home-product-image { aspect-ratio: 1.12; padding: 16px; }
+.home-page .home-section-title { font-size: 34px; line-height: 1.2; font-weight: 400; }
+.home-nav .font-display { font-weight: 400; }
+.home-page .home-hero-cta { background: hsl(var(--home-copper)); color: hsl(var(--cream)); }
+@media (max-width: 767px) {
+  .home-container { width: calc(100% - 40px); }
+  .home-hero { height: 520px; min-height: 0; max-height: 78svh; }
+  .home-hero h1 { font-size: 44px; }
+  .home-hero-photo { object-position: 64% center; }
+  .home-hero-shade { background: linear-gradient(90deg, hsl(var(--espresso) / .86), hsl(var(--espresso) / .28)); }
+  .home-page .home-section-title { font-size: 28px; }
+  .home-product-image { padding: 8px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-page *, .home-page *::before, .home-page *::after { animation: none !important; transition: none !important; }
+}
