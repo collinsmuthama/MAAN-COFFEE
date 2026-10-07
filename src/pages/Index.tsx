@@ -39,7 +39,7 @@ const Index = () => {
       </section>
 
       {/* Ready-Made Coffee Poster */}
-      <section className="py-16 bg-coffee-rich">
+      <section className="py-16 bg-espresso">
         <div className="container mx-auto px-4">
           <div className="relative overflow-hidden rounded-2xl border-2 border-gold/40 shadow-2xl">
             <img 
