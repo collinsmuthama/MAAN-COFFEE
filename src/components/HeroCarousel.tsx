@@ -62,7 +62,7 @@ const HeroCarousel = () => {
         opts={{
           loop: true,
           align: "center",
-          speed: 1200,
+          duration: 40,
         }}
         plugins={[
           Autoplay({
