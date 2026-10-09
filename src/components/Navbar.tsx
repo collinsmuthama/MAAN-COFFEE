@@ -1,99 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
-import { ShoppingCart, Menu, X } from "lucide-react";
+import { Menu, ShoppingCart, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { useCart } from "@/contexts/CartContext";
-import Logo  from "@/assets/Logo.jpeg";
+import Logo from "@/assets/Logo.jpeg";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
-  const { totalItems } = useCart();
-  const isHome = location.pathname === "/";
-
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "Products", path: "/products" },
-    { name: "Contact", path: "/contact" },
-    { name: "Export Market", path: "/markets" },
-  ];
-
-  const isActive = (path: string) => location.pathname === path;
-
-  return (
-    <nav className={`${isHome ? "home-nav absolute" : "fixed"} top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-gold/20`}>
-      <div className={isHome ? "home-container" : "container mx-auto px-4"}>
-        <div className={`flex items-center justify-between ${isHome ? "h-[72px]" : "h-20"}`}>
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <img src={Logo} alt="Tayo Coffee Logo" height="70px" width="70px" className={isHome ? "h-12 w-12 rounded-full object-cover" : ""} />
-            <span className="font-display text-2xl font-bold gold-text">TAYO</span>
-            <span className="font-display text-sm text-muted-foreground tracking-widest">COFFEE</span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`font-body text-sm tracking-wide transition-colors duration-300 ${
-                  isActive(link.path)
-                    ? "text-gold"
-                    : "text-foreground/80 hover:text-gold"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Cart & Mobile Menu */}
-          <div className="flex items-center space-x-4">
-            <Link to="/cart" className="relative">
-              <Button variant="ghost" size="icon" className="text-foreground hover:text-gold" aria-label="Shopping cart">
-                <ShoppingCart className="h-5 w-5" />
-                {totalItems > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-gold text-coffee-dark text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center">
-                    {totalItems}
-                  </span>
-                )}
-              </Button>
-            </Link>
-
-            <Button
-              variant="ghost" size="icon" aria-label={isOpen ? "Close menu" : "Open menu"} aria-expanded={isOpen}
-              className="md:hidden text-foreground"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-            </Button>
-          </div>
-        </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-gold/20">
-            {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                onClick={() => setIsOpen(false)}
-                className={`block py-3 font-body text-sm tracking-wide transition-colors duration-300 ${
-                  isActive(link.path)
-                    ? "text-gold"
-                    : "text-foreground/80 hover:text-gold"
-                }`}
-              >
-                {link.name}
-              </Link>
-            ))}
-          </div>
-        )}
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
+export default function Navbar() {
+  const [open, setOpen] = useState(false); const location = useLocation(); const { totalItems } = useCart();
+  const links = [{name:"Home",path:"/"},{name:"About Us",path:"/about"},{name:"Products",path:"/products"},{name:"Sourcing",path:"/#process"},{name:"Wholesale",path:"/contact"},{name:"Export",path:"/markets"},{name:"Contact",path:"/contact"}];
+  return <nav className="fixed inset-x-0 top-0 z-50 border-b border-gold/20 bg-background/95 backdrop-blur-md"><div className="site-shell"><div className="flex h-20 items-center justify-between"><Link to="/" className="flex items-center gap-3"><img src={Logo} alt="Tayo Coffee" width={52} height={52} className="h-12 w-12 rounded-full object-cover"/><div><span className="block font-display text-2xl leading-none text-gold">TAYO</span><span className="text-[8px] tracking-[.24em] text-cream/70">COFFEE</span></div></Link><div className="hidden items-center gap-7 lg:flex">{links.map(l=><Link key={l.name} to={l.path} className={`text-xs transition-colors hover:text-gold ${location.pathname===l.path?"text-gold":"text-cream/80"}`}>{l.name}</Link>)}</div><div className="flex items-center gap-1"><Link to="/cart" className="relative"><Button variant="ghost" size="icon" aria-label="Shopping cart"><ShoppingCart/>{totalItems>0&&<span className="absolute right-0 top-0 flex h-4 min-w-4 items-center justify-center rounded-full bg-gold px-1 text-[9px] text-coffee-dark">{totalItems}</span>}</Button></Link><Button variant="ghost" size="icon" aria-label={open?"Close menu":"Open menu"} aria-expanded={open} className="lg:hidden" onClick={()=>setOpen(!open)}>{open?<X/>:<Menu/>}</Button></div></div>{open&&<div className="border-t border-gold/20 py-3 lg:hidden">{links.map(l=><Link key={l.name} to={l.path} onClick={()=>setOpen(false)} className="block py-3 text-sm text-cream/80 hover:text-gold">{l.name}</Link>)}</div>}</div></nav>;
+}
