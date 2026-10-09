@@ -213,19 +213,19 @@ const Contact = () => {
 
               {/* Additional Info */}
               <div className="luxury-card p-8">
-                <h3 className="font-display text-xl text-gold mb-4">Why Choose Aurelia?</h3>
+                 <h3 className="font-display text-xl text-gold mb-4">Why Choose Tayo Coffee?</h3>
                 <ul className="space-y-3 text-muted-foreground text-sm">
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-gold rounded-full" />
-                    Premium 100% Arabica beans
+                     Coffee sourced in Kenya and Ethiopia
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-gold rounded-full" />
-                    Free worldwide shipping over $50
+                     Retail, wholesale and export supply
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-gold rounded-full" />
-                    30-day satisfaction guarantee
+                     Flexible processing and packaging
                   </li>
                   <li className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 bg-gold rounded-full" />

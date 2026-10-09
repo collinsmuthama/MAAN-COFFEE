@@ -31,8 +31,7 @@ const About = () => {
           </h1>
           <div className="section-divider mb-8" />
           <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
-            Crafting exceptional coffee experiences since 1985. Our journey began with a 
-            simple passion: to bring the world's finest coffee to discerning palates.
+             Tayo Coffee connects exceptional African coffee with retail, wholesale and export buyers.
           </p>
         </div>
       </section>
@@ -47,34 +46,29 @@ const About = () => {
               </h2>
               <div className="w-16 h-0.5 bg-gold mb-8" />
               <p className="text-muted-foreground leading-relaxed mb-6">
-                TAYO Coffee is a luxury coffee brand dedicated to sourcing, roasting, 
-                and delivering the world's most exceptional coffee beans. We partner with 
-                elite farmers across six continents to bring you flavors that transcend 
-                the ordinary.
+                 Tayo Coffee acquires raw coffee beans from trusted sources across Africa, with a focus on Kenya and Ethiopia. We select and process coffee for quality, consistency and market readiness.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Our master roasters craft each blend with precision and passion, ensuring 
-                every cup delivers an unparalleled sensory experience. From the first 
-                aroma to the last sip, Aurelia promises perfection.
+                 We roast, grind and package coffee for retail customers, wholesale partners and international buyers, adapting formats to different market requirements.
               </p>
             </div>
             <div className="luxury-card p-8">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4">
-                  <span className="font-display text-4xl gold-text font-bold">40+</span>
-                  <p className="text-muted-foreground text-sm mt-2">Years of Excellence</p>
+                   <span className="font-display text-4xl gold-text font-bold">2</span>
+                   <p className="text-muted-foreground text-sm mt-2">Core Origins</p>
                 </div>
                 <div className="text-center p-4">
-                  <span className="font-display text-4xl gold-text font-bold">6</span>
-                  <p className="text-muted-foreground text-sm mt-2">Global Branches</p>
+                   <span className="font-display text-4xl gold-text font-bold">3</span>
+                   <p className="text-muted-foreground text-sm mt-2">Sales Channels</p>
                 </div>
                 <div className="text-center p-4">
-                  <span className="font-display text-4xl gold-text font-bold">50K+</span>
-                  <p className="text-muted-foreground text-sm mt-2">Happy Customers</p>
+                   <span className="font-display text-4xl gold-text font-bold">100%</span>
+                   <p className="text-muted-foreground text-sm mt-2">African Coffee</p>
                 </div>
                 <div className="text-center p-4">
                   <span className="font-display text-4xl gold-text font-bold">100%</span>
-                  <p className="text-muted-foreground text-sm mt-2">Arabica Beans</p>
+                   <p className="text-muted-foreground text-sm mt-2">Quality Focused</p>
                 </div>
               </div>
             </div>
@@ -91,21 +85,13 @@ const About = () => {
             </h2>
             <div className="section-divider mb-8" />
             <p className="text-muted-foreground leading-relaxed mb-6">
-              In 1985, our founders embarked on a journey through the misty highlands of 
-              Ethiopia, where they discovered the transformative power of truly exceptional 
-              coffee. That revelation sparked a lifelong mission: to share the world's 
-              finest coffee with those who appreciate the extraordinary.
+               Tayo Coffee was built around a clear purpose: to help quality African coffee travel further. We acquire raw coffee from Kenya and Ethiopia and prepare it for customers who value origin, consistency and dependable supply.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              From a small roastery in London to a global presence spanning six continents, 
-              Aurelia has grown while staying true to its founding principles. We believe 
-              that great coffee is more than a beverage—it's an experience, a moment of 
-              pure luxury in your daily life.
+               Our work covers the journey from raw bean selection through processing and packaging. We serve individual buyers, retailers, cafés, distributors and export partners.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Today, we continue to push the boundaries of coffee excellence, partnering 
-              with the world's most skilled farmers and investing in sustainable practices 
-              that ensure future generations can enjoy the same exceptional quality.
+               By maintaining strong sourcing relationships and attentive quality control, we aim to build lasting value for both African producers and coffee buyers around the world.
             </p>
           </div>
         </div>
@@ -144,12 +130,12 @@ const About = () => {
             </h2>
             <div className="section-divider mb-6" />
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              We source our beans from the world's premier coffee-growing regions
+               Our sourcing is focused on leading African coffee origins
             </p>
           </div>
 
           <div className="flex flex-wrap justify-center gap-6">
-            {regions.map((region, index) => (
+             {regions.slice(0, 2).map((region, index) => (
               <div
                 key={index}
                 className="luxury-card px-8 py-6 flex items-center gap-4"
@@ -162,16 +148,16 @@ const About = () => {
         </div>
       </section>
 
-      {/* Global Branches */}
+      {/* Markets */}
       <section className="py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl font-bold mb-4">
-              Global <span className="gold-text">Branches</span>
+               Markets We <span className="gold-text">Serve</span>
             </h2>
             <div className="section-divider mb-6" />
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Visit us at any of our premium locations worldwide
+               Retail and wholesale customers locally, with export relationships internationally
             </p>
           </div>
 
