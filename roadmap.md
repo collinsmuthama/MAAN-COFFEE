@@ -3,6 +3,8 @@
 - [ ] Reframe the business around acquiring African raw beans, processing, packaging, retail, wholesale, and export.
 - [ ] Replace ready-made drink messaging with green/raw, roasted, ground, and packaged coffee offerings.
 - [ ] Verify the refreshed pages on desktop and mobile.
+- [ ] Build a takeaway coffee shop listing all takeaway products.
+- [ ] Add an individual page for each takeaway product with size, price, and add-to-cart.
 
 # Ready-made coffee delivery and payments
 - [ ] Confirm the seller's registered country and delivery coverage/fulfilment.
