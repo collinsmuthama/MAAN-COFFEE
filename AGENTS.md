@@ -1,2 +1,3 @@
 Keep theme colours in global semantic CSS tokens; scope cream content-band tokens locally so the existing layout stays unchanged and text retains contrast.
 Use a dedicated HomeProductCard and locally scoped homepage styling for the reference-led landing page, so other shopping pages retain their presentation and all product data comes from the shared catalogue.
+Keep takeaway product listing and detail views driven by the shared readyMadeDrinks catalogue, so prices, sizes, cart data and product URLs stay synchronized.
