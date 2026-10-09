@@ -1,7 +1,6 @@
 import espressoImage from "@/assets/Espresso.png";
 import darkRoastImage from "@/assets/Dark_roast.jpeg";
 import mediumRoastImage from "@/assets/Medium.png";
-import takeawayCup from "@/assets/takeaway-cup.jpeg";
 import takeawayMaanEspresso from "@/assets/espresso_takeaway.png";
 import takeawayMaanDarkRoast from "@/assets/dark_takeaway.jpeg";
 import takeawayMaanMediumRoast from "@/assets/takeaway-maan-medium-roast.png";
@@ -40,11 +39,11 @@ export const products: Product[] = [
   },
 ];
 
-// Ready-to-drink coffee in takeaway cups
+// Fresh takeaway coffee products
 export const readyMadeDrinks: Product[] = [
   {
-    id: "Tayo-espresso-takeaway",
-    name: "Tayo Espresso",
+    id: "tayo-espresso-double",
+    name: "Tayo Espresso Double",
     description: "Rich, full-bodied espresso with sweet chocolate notes and intense aroma. Perfect for a quick pick-me-up.",
     price: 3.8,
     local: 500,
@@ -53,8 +52,8 @@ export const readyMadeDrinks: Product[] = [
     category: "ready-made",
   },
   {
-    id: "Tayo-espresso-takeaway",
-    name: "Tayo Espresso",
+    id: "tayo-espresso-single",
+    name: "Tayo Espresso Single",
     description: "Rich, full-bodied espresso with sweet chocolate notes and intense aroma. Perfect for a quick pick-me-up.",
     price: 2.7,
     local: 350,
@@ -64,8 +63,8 @@ export const readyMadeDrinks: Product[] = [
   },
   
   {
-    id: "Tayo-dark-roast-takeaway",
-    name: "Tayo Dark Roast",
+    id: "tayo-dark-roast-double",
+    name: "Tayo Dark Roast Double",
     description: "Earthy, dark chocolate flavors with a velvety finish. Notes of roasted nuts and brown sugar.",
     price: 3.8,
     local:500,
@@ -74,13 +73,23 @@ export const readyMadeDrinks: Product[] = [
     category: "ready-made",
   },
     {
-    id: "Tayo-dark-roast-takeaway",
-    name: "Tayo Dark Roast",
+    id: "tayo-dark-roast-single",
+    name: "Tayo Dark Roast Single",
     description: "Earthy, dark chocolate flavors with a velvety finish. Notes of roasted nuts and brown sugar.",
     price: 2.7,
     local:350,
     image: takeawayMaanDarkRoast,
     weight: "Single",
+    category: "ready-made",
+  },
+  {
+    id: "tayo-medium-roast-450ml",
+    name: "Tayo Medium Roast",
+    description: "Balanced and smooth with citrus brightness, gentle sweetness, and a clean aromatic finish.",
+    price: 3.8,
+    local: 500,
+    image: takeawayMaanMediumRoast,
+    weight: "450ml",
     category: "ready-made",
   },
 ];

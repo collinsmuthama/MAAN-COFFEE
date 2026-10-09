@@ -1,0 +1,13 @@
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { ArrowLeft, Check, ShoppingCart, Truck } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { readyMadeDrinks, products } from "@/data/products";
+import { useCart } from "@/contexts/CartContext";
+
+export default function ProductDetail() {
+  const { productId } = useParams(); const navigate = useNavigate(); const { addToCart } = useCart();
+  const product = [...readyMadeDrinks, ...products].find(item => item.id === productId);
+  if (!product) return <div className="reference-cream min-h-screen pt-36 text-center"><h1 className="font-display text-4xl">Product not found</h1><Button asChild className="mt-6"><Link to="/products">Return to shop</Link></Button></div>;
+  const buy = () => { addToCart(product); navigate("/cart"); };
+  return <div className="reference-cream min-h-screen pt-20"><div className="site-shell py-10 md:py-16"><Link to="/products" className="inline-flex items-center gap-2 text-xs text-muted-foreground hover:text-gold"><ArrowLeft className="h-4 w-4" />Back to shop</Link><div className="mt-8 grid items-center gap-12 lg:grid-cols-2"><div className="aspect-square overflow-hidden rounded-md border border-border bg-card p-8"><img src={product.image} alt={product.name} width={800} height={800} className="h-full w-full object-contain" /></div><div><p className="section-kicker text-gold">TAYO TAKEAWAY COFFEE</p><h1 className="mt-3 font-display text-4xl md:text-5xl">{product.name}</h1><p className="mt-5 text-sm leading-7 text-muted-foreground">{product.description}</p><div className="my-7 flex flex-wrap items-center gap-4"><span className="rounded-full border border-gold px-4 py-2 text-sm">Size: {product.weight}</span><span className="font-display text-3xl text-foreground">KES {product.local}</span><span className="text-sm text-muted-foreground">${product.price.toFixed(2)}</span></div><div className="space-y-3 border-y border-border py-6 text-sm text-muted-foreground"><p className="flex items-center gap-3"><Check className="h-4 w-4 text-gold" />Freshly prepared to order</p><p className="flex items-center gap-3"><Check className="h-4 w-4 text-gold" />Premium Tayo Coffee roast</p><p className="flex items-center gap-3"><Truck className="h-4 w-4 text-gold" />Local delivery available</p></div><div className="mt-7 flex flex-wrap gap-3"><Button size="lg" onClick={() => addToCart(product)}><ShoppingCart />Add to Cart</Button><Button size="lg" variant="goldOutline" onClick={buy}>Buy Now</Button></div></div></div></div></div>;
+}

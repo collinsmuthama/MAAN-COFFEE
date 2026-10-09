@@ -287,6 +287,16 @@
 .home-page .home-section-title { font-size: 34px; line-height: 1.2; font-weight: 400; }
 .home-nav .font-display { font-weight: 400; }
 .home-page .home-hero-cta { background: hsl(var(--home-copper)); color: hsl(var(--cream)); }
+.site-shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
+.section-kicker { font-size: 10px; line-height: 1.4; font-weight: 700; letter-spacing: .14em; }
+.section-heading { font-family: "Playfair Display", serif; font-size: 38px; line-height: 1.12; font-weight: 500; }
+.reference-cream {
+  --background: 40 40% 96%; --foreground: 22 45% 12%; --card: 40 38% 98%; --card-foreground: 22 45% 12%;
+  --muted: 38 25% 90%; --muted-foreground: 25 15% 38%; --border: 35 24% 82%; --input: 35 24% 82%;
+  --primary: 38 72% 50%; --primary-foreground: 22 55% 10%; --gold: 38 72% 43%; --gold-light: 39 68% 53%;
+  --ring: 38 72% 43%; color: hsl(var(--foreground)); background: hsl(var(--background));
+}
+.tayo-hero-overlay { background: linear-gradient(90deg, hsl(var(--coffee-dark) / .9) 0%, hsl(var(--coffee-dark) / .58) 42%, transparent 72%); }
 @media (max-width: 767px) {
   .home-container { width: calc(100% - 40px); }
   .home-hero { height: 520px; min-height: 0; max-height: 78svh; }
@@ -295,6 +305,9 @@
   .home-hero-shade { background: linear-gradient(90deg, hsl(var(--espresso) / .86), hsl(var(--espresso) / .28)); }
   .home-page .home-section-title { font-size: 28px; }
   .home-product-image { padding: 8px; }
+  .site-shell { width: calc(100% - 32px); }
+  .section-heading { font-size: 31px; }
+  .tayo-hero-overlay { background: linear-gradient(90deg, hsl(var(--coffee-dark) / .88), hsl(var(--coffee-dark) / .36)); }
 }
 @media (prefers-reduced-motion: reduce) {
   .home-page *, .home-page *::before, .home-page *::after { animation: none !important; transition: none !important; }
